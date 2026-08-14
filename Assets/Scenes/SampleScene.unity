@@ -997,7 +997,7 @@ GameObject:
   - component: {fileID: 567150445}
   - component: {fileID: 567150444}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: JoystickCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1334,7 +1334,7 @@ GameObject:
   - component: {fileID: 1165947082}
   - component: {fileID: 1165947081}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: EnemyTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1463,6 +1463,8 @@ GameObject:
   - component: {fileID: 1788477817}
   - component: {fileID: 1788477818}
   - component: {fileID: 1788477819}
+  - component: {fileID: 1788477820}
+  - component: {fileID: 1788477821}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1660,6 +1662,36 @@ MonoBehaviour:
   config: {fileID: 11400000, guid: 0ede80c86da57494ea5f23657f6dfa10, type: 2}
   bulletPrefab: {fileID: 7537094460308814543, guid: e01ee2043bc5e224d973110c3a1e5eea, type: 3}
   firePoint: {fileID: 1130206541}
+--- !u!114 &1788477820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788477809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 606a3aa7ee041e34a9d5c267e11c90e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BombSkill
+  config: {fileID: 11400000, guid: 0ede80c86da57494ea5f23657f6dfa10, type: 2}
+  bombPrefab: {fileID: -3444228583162006609, guid: d80a7482698a6f348a417a68f2702623, type: 3}
+  cooldownTime: 0
+--- !u!114 &1788477821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788477809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0073d5c642b2e434796787f3fa5df76f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DashSkill
+  config: {fileID: 11400000, guid: 0ede80c86da57494ea5f23657f6dfa10, type: 2}
+  movement: {fileID: 1788477815}
+  controller: {fileID: 1788477810}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

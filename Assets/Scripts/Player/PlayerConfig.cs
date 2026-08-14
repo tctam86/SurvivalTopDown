@@ -22,4 +22,17 @@ public class PlayerConfig : ScriptableObject
     public float spreadAngle = 15f;
     public float bulletSpeed = 20f;
 
+
+    [Header("Bomb")]
+    public int bombDamage = 50;
+    public float bombCooldown = 12f;
+    public float bombRadius = 5f;
+    public float bombDelay = 2f;
+
+    [Header("Dash")]
+    public float dashDistance = 3f;
+    public float dashDuration = 0.3f;
+    public int dashDamage = 15;
+    public float dashRadius = 3f;
+    public float dashCooldown = 6f;
 }
