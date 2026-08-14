@@ -13,7 +13,6 @@ public class DamageTester : MonoBehaviour
         if (Keyboard.current != null && Keyboard.current.hKey.wasPressedThisFrame)
         {
             playerHealth.TakeDamage(50);
-            Debug.Log("Bấm H: gây 50 sát thương");
         }
     }
 }

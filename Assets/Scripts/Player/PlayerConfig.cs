@@ -14,4 +14,12 @@ public class PlayerConfig : ScriptableObject
     public int armour = 0;
     public float dmgMul = 0;
 
+    [Header("Shooting")]
+    public int bulletDamage = 10;
+    public int maxCharge = 3;
+    public float chargeRegen = 3f;
+    public float fireInterval = 0.5f;
+    public float spreadAngle = 15f;
+    public float bulletSpeed = 20f;
+
 }
