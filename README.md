@@ -66,21 +66,21 @@ Assets/
 
 ### Đã làm
 
-[x] Nhân vật di chuyển bằng joystick ảo, xoay 180°/giây, camera follow.
-[x] Công thức sát thương (giáp giảm, dmg multiplier tăng).
-[x] Bắn 3 viên hình nón + hệ thống charge.
-[x] Đặt bom (2s nổ, AoE 5) + dash rồi nổ (AoE 3).
-[x] Quái đánh gần (nón 50°, tầm 1.3) + quái đánh xa (đạn độc, 4 tick, refresh không stack).
-[x] Hệ thống wave (3–4 gần + 1–2 xa), chỉ spawn wave kế sau khi clear.
-[x] EXP + lên cấp (+40 HP, +2 giáp, +0.1 dmg).
-[x] UI: thanh máu player/quái, level, joystick, nút kỹ năng + cooldown.
-[x] Chỉ số tập trung trong ScriptableObject config, reset mỗi lần Play mới.
+- [x] Nhân vật di chuyển bằng joystick ảo, xoay 180°/giây, camera follow.
+- [x] Công thức sát thương (giáp giảm, dmg multiplier tăng).
+- [x] Bắn 3 viên hình nón + hệ thống charge.
+- [x] Đặt bom (2s nổ, AoE 5) + dash rồi nổ (AoE 3).
+- [x] Quái đánh gần (nón 50°, tầm 1.3) + quái đánh xa (đạn độc, 4 tick, refresh không stack).
+- [x] Hệ thống wave (3–4 gần + 1–2 xa), chỉ spawn wave kế sau khi clear.
+- [x] EXP + lên cấp (+40 HP, +2 giáp, +0.1 dmg).
+- [x] UI: thanh máu player/quái, level, joystick, nút kỹ năng + cooldown.
+- [x] Chỉ số tập trung trong ScriptableObject config, reset mỗi lần Play mới.
 
 ### Chưa làm
 
-[ ] Camera shake.
-[ ] VFX/âm thanh.
-[ ] Object pooling đạn
+- [ ] Camera shake.
+- [ ] VFX/âm thanh.
+- [ ] Object pooling đạn
 
 ## Build
 **Build Windows:** File → Build Settings → Platform: Windows (x86_64) → Build.
