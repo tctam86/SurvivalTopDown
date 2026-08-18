@@ -83,4 +83,4 @@ Assets/
 - [ ] Object pooling đạn
 
 ## Build
-**Build Windows:** File → Build Settings → Platform: Windows (x86_64) → Build.
+**Build Windows:** File → Build Profiles →  Platforms →  Windows →  Build
