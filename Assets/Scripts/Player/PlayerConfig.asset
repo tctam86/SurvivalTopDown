@@ -17,3 +17,18 @@ MonoBehaviour:
   rotateSpeed: 180
   armour: 0
   dmgMul: 0
+  bulletDamage: 10
+  maxCharge: 3
+  chargeRegen: 3
+  fireInterval: 0.5
+  spreadAngle: 15
+  bulletSpeed: 20
+  bombDamage: 50
+  bombCooldown: 12
+  bombRadius: 5
+  bombDelay: 2
+  dashDistance: 3
+  dashDuration: 0.5
+  dashDamage: 15
+  dashRadius: 3
+  dashCooldown: 6

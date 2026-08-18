@@ -1,6 +1,5 @@
 
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class ShootingSkill : MonoBehaviour
 {
@@ -20,9 +19,6 @@ public class ShootingSkill : MonoBehaviour
     void Update()
     {
         ChargeRegen();
-
-        if (Keyboard.current != null && Keyboard.current.jKey.wasPressedThisFrame)
-            TryFire();
     }
 
     private void ChargeRegen()
@@ -35,7 +31,6 @@ public class ShootingSkill : MonoBehaviour
         {
             charge++;
             chargeTime = 0f;
-            Debug.Log($"Charge regenerated. Current charge: {charge}/{config.maxCharge}");
         }
     }
 
@@ -50,7 +45,6 @@ public class ShootingSkill : MonoBehaviour
     {
         lastFireTime = Time.time;
         charge--;
-        Debug.Log($"Fired! Current charge: {charge}/{config.maxCharge}");
 
         int damage = Mathf.RoundToInt(config.bulletDamage * (1f + config.dmgMul));
 
@@ -67,5 +61,13 @@ public class ShootingSkill : MonoBehaviour
 
             bullet.Setup(dir, damage);
         }
+    }
+    public int Charge
+    {
+        get { return charge; }
+    }
+    public int MaxCharge
+    {
+        get { return config.maxCharge; }
     }
 }

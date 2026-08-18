@@ -1,16 +1,31 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class EnemyHealth : MonoBehaviour, IDamageable
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private EnemyConfig config;
 
-    // Update is called once per frame
-    void Update()
+    private int currentHp;
+    public int CurrentHp
     {
-        
+        get { return currentHp; }
+    }
+    public int MaxHp
+    {
+        get { return config.maxHp; }
+    }
+    private void Awake()
+    {
+        currentHp = config.maxHp;
+    }
+    public void TakeDamage(int rawDamage)
+    {
+        currentHp = Mathf.Max(0, currentHp - rawDamage);
+
+        if (currentHp <= 0)
+        {
+            ExperienceSystem exp = FindFirstObjectByType<ExperienceSystem>();
+            if (exp != null) exp.AddExp(30);
+            Destroy(gameObject);
+        }
     }
 }

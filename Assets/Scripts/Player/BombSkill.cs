@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
+
 public class BombSkill : MonoBehaviour
 {
     [SerializeField] private PlayerConfig config;
@@ -13,9 +13,6 @@ public class BombSkill : MonoBehaviour
         if (cooldownTime > 0f)
             cooldownTime = cooldownTime - Time.deltaTime;
 
-        if (Keyboard.current != null && Keyboard.current.kKey.wasPressedThisFrame)
-            TryPlaceBomb();
-
     }
 
 
@@ -25,5 +22,13 @@ public class BombSkill : MonoBehaviour
         Bomb bomb = Instantiate(bombPrefab, transform.position, Quaternion.identity);
         cooldownTime = config.bombCooldown;
 
+    }
+    public float CooldownRatio
+    {
+        get { return cooldownTime / config.bombCooldown; }
+    }
+    public float CooldownRemaining
+    {
+        get { return cooldownTime; }
     }
 }

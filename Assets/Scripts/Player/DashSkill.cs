@@ -1,6 +1,4 @@
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class DashSkill : MonoBehaviour
 {
@@ -22,8 +20,6 @@ public class DashSkill : MonoBehaviour
             DashMovement();
             return;
         }
-        if (Keyboard.current != null && Keyboard.current.lKey.wasPressedThisFrame)
-            TryDash();
 
     }
 
@@ -66,5 +62,13 @@ public class DashSkill : MonoBehaviour
             if (target != null)
                 target.TakeDamage(config.dashDamage);
         }
+    }
+    public float CooldownRatio
+    {
+        get { return cooldownTime / config.dashCooldown; }
+    }
+    public float CooldownRemaining
+    {
+        get { return cooldownTime; }
     }
 }
